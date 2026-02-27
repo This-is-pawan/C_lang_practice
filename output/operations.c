@@ -118,12 +118,42 @@
 // 13) Conditional
 // 14) Assigment
 // 15) Comma
-#include <stdio.h>
+// #################### table of 6 #########
+// #include <stdio.h>
+
+// int main()
+// {
+//     int count = 6;
+
+//     for (int i = 1; i <= 10; i++)
+//     {
+//         printf("6 x %d = %d\n", i, i * count);
+//     }
+
+//     return 0;
+// }
+/*
+###### format specifier in c mostly use ########
+%c =>character
+%d =>integer
+%f =>float
+%lf =>long
+%Lf =>double
+%Lf =>long double
+*/
+
+/*
+##########   constant in c   ##########
+a constant is a value or variable that can't be changed in the program, for e.g 15,23,'a',3.4 'pk' etc
+there are two ways to define constant in C programming.
+const keyword
+#define preprocessor
+
 
 int main()
 {
-    int count = 6;
-
+   const  int count = 6;
+      count=4;  cannot do this since PI is a constant
     for (int i = 1; i <= 10; i++)
     {
         printf("6 x %d = %d\n", i, i * count);
@@ -131,3 +161,25 @@ int main()
 
     return 0;
 }
+    #include <stdio.h>
+    #define PI 3.14
+int main()
+{
+   const  int count = 6;
+   PI=2.3;int = 6; cannot do this since PI is a constant
+     printf("%d",PI)
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("6 x %d = %d\n", i, i * count);
+    }
+
+    return 0;
+}
+#### scape sequences list in C lang ####
+printf("tab character \t\t my backslash \n %f",PI);
+printf("tab character \t\t my backslash \a %f",PI); window sound
+
+
+*/ 
+
+
