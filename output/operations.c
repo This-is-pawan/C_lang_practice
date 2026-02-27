@@ -183,3 +183,46 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 */ 
 
 
+// #include <stdio.h>
+// int main(){
+//  int age;
+//  printf("enter your age\n");
+//  scanf("%d",&age);
+//  printf("you have entered %d as your age\n",age);
+//  if (age>=18)
+//  {
+//   printf("you can drive");
+//   /* code */
+//  }else if (age>10)
+//  {
+//   /* code */
+//   printf("you cannot drive ");
+//  }
+ 
+ 
+//  return 0;
+// }
+// #include <stdio.h>
+
+// int main()
+// {
+//     int a ;
+    //    printf("Enter your age\n")
+    // scanf("%d",&a)
+//     switch (a)
+//     {
+//         case 2:
+//             printf("Value is 2\n");
+//             break;
+
+//         case 3:
+//             printf("Value is 3\n");
+//             break;
+
+//         default:
+//             printf("Value is default\n");
+//             break;
+//     }
+
+//     return 0;
+// }
