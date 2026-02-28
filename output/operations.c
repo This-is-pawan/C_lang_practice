@@ -399,43 +399,65 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //     return 0;
 // }
 // e.g
-#include <stdio.h>
-int sum(int a,int b){
-    return a+b;
-}
-void printstar(int n){
-    for (int i = 0; i < n; i++)
-    {
-     printf("%c %d",'*',i);
-    }
+// #include <stdio.h>
+// int sum(int a,int b){
+//     return a+b;
+// }
+// void printstar(int n){
+//     for (int i = 0; i < n; i++)
+//     {
+//      printf("%c %d",'*',i);
+//     }
     
-    printf("%c",'*');
+//     printf("%c",'*');
+// }
+
+// int takenumber(){
+//     int i;
+//     printf("Enter a number");
+//     scanf("%d",&i);
+//     return i;
+// } 
+
+
+// int main()
+// {
+//     int a,b,c;
+//     a=9;
+//     b=90;
+//     c=sum(a,b);
+//     printf("the sum is %d\n",c);
+//    c= takenumber();
+//    printf("the number enter %d",c);
+//     printstar(3);
+
+    
+//     return 0;
+// }
+
+#include <stdio.h>
+
+void table(int num)
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
 }
-
-int takenumber(){
-    int i;
-    printf("Enter a number");
-    scanf("%d",&i);
-    return i;
-} 
-
 
 int main()
 {
-    int a,b,c;
-    a=9;
-    b=90;
-    c=sum(a,b);
-    printf("the sum is %d\n",c);
-   c= takenumber();
-   printf("the number enter %d",c);
-    printstar(3);
+    int num;
 
-    
+    printf("Enter the number you want multiplication table of:\n");
+    scanf("%d", &num);
+
+    printf("Multiplication table of %d is as follows:\n", num);
+
+    table(num);   // function call
+
     return 0;
 }
-
-
 
 
 
