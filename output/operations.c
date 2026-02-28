@@ -335,8 +335,105 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //     return 0;
 // }
 
+// ___________function in c lang____________
+
+// declaration e.g int print(),definition { block},call print();
+// #include <stdio.h>
+
+// int print();   // declaration
+
+// int main()
+// {
+//     print();   // function call
+//     return 0;
+// }
+
+// int print()    // definition
+// {
+//     printf("Hello Pawan bro!");
+//     return 0;
+// }
+// #### types of functions #####
+//1)---- libary functions ----  functions included in c headers files e.g printf("the is a value")
+// In C language, header files contain the declaration of library functions.
+// When you use any built-in function like printf() or scanf(), you must include its header file at the top of the program.
+
+// Syntax:
+// #include <header_file_name>
+//  What is a Header File?
+
+// A header file is a file with .h extension that contains:
+
+// Function declarations
+
+// Macros
+
+// Constants
+
+// Example:
+
+//------ include <stdio.h> ------
+// 2)user defined functions:- functions created by c programmer to reduce complexity of a porgram
 
 
+// e.gs of functions
+// #include <stdio.h>
+
+// // Function declaration
+// int print(int a, int b);
+
+// int main()
+// {
+//     int a = 6;
+//     int b = 5;
+
+//     print(a, b);   // function call
+
+//     return 0;
+// }
+
+// // Function definition
+// int print(int a, int b)
+// {
+//     printf("%d", a + b);
+//     return 0;
+// }
+// e.g
+#include <stdio.h>
+int sum(int a,int b){
+    return a+b;
+}
+void printstar(int n){
+    for (int i = 0; i < n; i++)
+    {
+     printf("%c %d",'*',i);
+    }
+    
+    printf("%c",'*');
+}
+
+int takenumber(){
+    int i;
+    printf("Enter a number");
+    scanf("%d",&i);
+    return i;
+} 
+
+
+int main()
+{
+    int a,b,c;
+    a=9;
+    b=90;
+    c=sum(a,b);
+    printf("the sum is %d\n",c);
+   c= takenumber();
+   printf("the number enter %d",c);
+    printstar(3);
+
+    
+    return 0;
+}
 
 
 
