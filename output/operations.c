@@ -180,8 +180,7 @@ printf("tab character \t\t my backslash \n %f",PI);
 printf("tab character \t\t my backslash \a %f",PI); window sound
 
 
-*/ 
-
+*/
 
 // #include <stdio.h>
 // int main(){
@@ -198,8 +197,7 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //   /* code */
 //   printf("you cannot drive ");
 //  }
- 
- 
+
 //  return 0;
 // }
 // #include <stdio.h>
@@ -207,22 +205,142 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 // int main()
 // {
 //     int a ;
-    //    printf("Enter your age\n")
-    // scanf("%d",&a)
+//    printf("Enter your age\n")
+// scanf("%d",&a)
 //     switch (a)
 //     {
 //         case 2:
 //             printf("Value is 2\n");
 //             break;
-
+// swith() nested condition
 //         case 3:
 //             printf("Value is 3\n");
 //             break;
 
 //         default:
 //             printf("Value is default\n");
-//             break;
+//
 //     }
 
 //     return 0;
 // }
+// ###################  Loops in c       ####################
+// ############ do while ##########
+// #include <stdio.h>
+
+// int main()
+// {
+//     int val, index = 0;
+//     printf("Enter the value\n");
+//     scanf("%d", &val);
+//     do
+//     {
+//         index += 1;
+//         printf("%d\n", index);
+//     } while (index < val);
+
+//     return 0;
+// }
+// ########### while loop ##########
+// #include <stdio.h>
+
+// int main()
+// {
+//     int val, index = 0;
+//     printf("Enter the value\n");
+//     scanf("%d", &val);
+//     while (index<=val)
+//     {
+//         index +=1;
+//     printf("%d => %d\n",index-1,index);
+//     }
+    
+
+//     return 0;
+// }
+
+// ########### for loop ###########
+// #include <stdio.h>
+// int main()
+// {
+// // char a = 'A';        // correct
+// // char a = "A";        // wrong
+// // char name[] = "A";   // correct
+
+//     char count[] = "Happysingh"; 
+//     int val;
+
+//      printf("Enter the value:\n");
+//      scanf("%d", &val);
+
+//     for (int i = 0; i < val; i++)
+//     {
+//         if (i==4)
+//         {
+//             continue;
+//         }
+//         printf("%c", count[i]);   // print character one by one
+//     }
+
+//     return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     label:printf("we are inside label");
+//     goto end;
+//     printf("hello world");
+//     goto label;
+//     end:printf("we are at end");
+//     return 0;
+// }
+// #############  GOTO in c lang   #######################
+// Note:For e.g in Nested loops, we can exist from one loop using break, but in c lang ,we can exist from all loops using goto
+// #include <stdio.h>
+// int main()
+// {
+//     int num;
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("%d\n",i);
+//         for (int j = 0; j < 5; j++){
+// printf("Enter the number\n");
+// scanf("%d",&num);
+// if (num==0){
+//     // break;
+//     goto end;
+// }
+// {
+   
+// }
+
+//         }
+//     }
+// end:printf("both loops end using the goto");
+//     return 0;
+// }
+
+// _________________type casting syntax___________________
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int a = 3;
+//     float b = (float)54 / 4;
+
+//     printf("The value of b is %f\n", b);      // 13.500000
+//     printf("The value of b as int is %d\n", (int)b); // 13
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
