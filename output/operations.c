@@ -24,15 +24,15 @@ a / b = 5
  #include <stdio.h>
 int main(){
 
-//  int a;
-//  float b;
-//  a = 34;
-//  b = 6.34;
+ int a;
+ float b;
+ a = 34;
+ b = 6.34;
 
-//  printf("a + b = %f\n",a+b);
-//  printf("a - b = %f\n",a-b);
-//  printf("a * b = %f\n",a*b);
-//  printf("a / b = %f\n",a/b);
+ printf("a + b = %f\n",a+b);
+ printf("a - b = %f\n",a-b);
+ printf("a * b = %f\n",a*b);
+ printf("a / b = %f\n",a/b);
 
 // __________result_____________
 
@@ -42,17 +42,17 @@ int main(){
 // a / b = 5.362776
 // }
 // ###############  realtional operations ################
-// #include <stdio.h>
-// int main(){
+#include <stdio.h>
+int main(){
 
-//  int a,b;
-//  a = 34;
-//  b = 34;
+ int a,b;
+ a = 34;
+ b = 34;
 
-//  printf("a== b = %d\n",a!=b);
-//  printf("a== b = %d\n",a==b);
-//  printf("a > b = %d\n",a>b);
-//  printf("a < b = %d\n",a<b);
+ printf("a== b = %d\n",a!=b);
+ printf("a== b = %d\n",a==b);
+ printf("a > b = %d\n",a>b);
+ printf("a < b = %d\n",a<b);
 
 // ___________result_____________
 
@@ -62,13 +62,13 @@ int main(){
 // a < b = 0 false
 // }
 // ############# logical operations ###############
-// #include <stdio.h>
-// int main(){
-//  int a,b;
-//  a = 34;
-//  b = 34;
-//  printf("a && b = %d\n",a&&b==24);
-//  printf("a|| b = %d\n",a||b==34);
+#include <stdio.h>
+int main(){
+ int a,b;
+ a = 34;
+ b = 34;
+ printf("a && b = %d\n",a&&b==24);
+ printf("a|| b = %d\n",a||b==34);
 
 //  __________result___________
 
@@ -81,14 +81,14 @@ int main(){
 // 1=>01
 // 2=>10
 // 3=>11
-// #include <stdio.h>
-// int main(){
-//  int a,b;
-//  a = 2;
-//  b = 3;
-//  printf("a && b = %d\n",a&&b==24);
-//  printf("a|| b = %d\n",a|b==34);
-//  printf("a^ b = %d\n",a^b==4);
+#include <stdio.h>
+int main(){
+ int a,b;
+ a = 2;
+ b = 3;
+ printf("a && b = %d\n",a&&b==24);
+ printf("a|| b = %d\n",a|b==34);
+ printf("a^ b = %d\n",a^b==4);
 
 // __________result___________
 
@@ -119,19 +119,19 @@ int main(){
 // 14) Assigment
 // 15) Comma
 // #################### table of 6 #########
-// #include <stdio.h>
+#include <stdio.h>
 
-// int main()
-// {
-//     int count = 6;
+int main()
+{
+    int count = 6;
 
-//     for (int i = 1; i <= 10; i++)
-//     {
-//         printf("6 x %d = %d\n", i, i * count);
-//     }
+    for (int i = 1; i <= 10; i++)
+    {
+        printf("6 x %d = %d\n", i, i * count);
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 /*
 ###### format specifier in c mostly use ########
 %c =>character
