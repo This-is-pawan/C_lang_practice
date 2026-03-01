@@ -1,28 +1,28 @@
 // ######### Arthmatic operations ################
-//  #include <stdio.h>
-//  int main(){
+ #include <stdio.h>
+int main(){
 
-//  int a,b;
-//  a = 34;
-//  b = 6;
+ int a,b;
+ a = 34;
+ b = 6;
 
-//  printf("a + b = %d\n",a+b);
-//  printf("a - b = %d\n",a-b);
-//  printf("a * b = %d\n",a*b);
-//  printf("a / b = %d\n",a/b);
-//  printf("a modle b = %d\n",a%b);
+ printf("a + b = %d\n",a+b);
+  printf("a - b = %d\n",a-b);
+printf("a * b = %d\n",a*b);
+ printf("a / b = %d\n",a/b);
+printf("a modle b = %d\n",a%b);
 
 // _____________________result__________________
 
-//  a + b = 40
-// a - b = 28
-// a * b = 204
-// a / b = 5
-// a modle b = 4
-// }
+a + b = 40
+ a - b = 28
+a * b = 204
+a / b = 5
+ a modle b = 4
+ }
 
-// #include <stdio.h>
-// int main(){
+ #include <stdio.h>
+int main(){
 
 //  int a;
 //  float b;
