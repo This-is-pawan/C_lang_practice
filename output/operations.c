@@ -14,12 +14,12 @@ printf("a modle b = %d\n",a%b);
 
 // _____________________result__________________
 
-a + b = 40
- a - b = 28
-a * b = 204
-a / b = 5
- a modle b = 4
- }
+// a + b = 40
+//  a - b = 28
+// a * b = 204
+// a / b = 5
+//  a modle b = 4
+//  }
 
  #include <stdio.h>
 int main(){
