@@ -203,30 +203,30 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 
 //  return 0;
 // }
-// #include <stdio.h>
+#include <stdio.h>
 
-// int main()
-// {
-//     int a ;
-//    printf("Enter your age\n")
-// scanf("%d",&a)
-//     switch (a)
-//     {
-//         case 2:
-//             printf("Value is 2\n");
-//             break;
-// swith() nested condition
-//         case 3:
-//             printf("Value is 3\n");
-//             break;
+int main()
+{
+    int a ;
+   printf("Enter your age\n")
+scanf("%d",&a)
+    switch (a)
+    {
+        case 2:
+            printf("Value is 2\n");
+            break;
+swith() nested condition
+        case 3:
+            printf("Value is 3\n");
+            break;
 
-//         default:
-//             printf("Value is default\n");
-//
-//     }
+        default:
+            printf("Value is default\n");
 
-//     return 0;
-// }
+    }
+
+    return 0;
+}
 // ###################  Loops in c       ####################
 // ############ do while ##########
 // #include <stdio.h>
