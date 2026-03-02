@@ -134,12 +134,15 @@ int main()
 }
 /*
 ###### format specifier in c mostly use ########
-%c =>character
-%d =>integer
-%f =>float
-%lf =>long
-%Lf =>double
-%Lf =>long double
+| Data Type   | Format Specifier (printf) | Format Specifier (scanf) |
+| ----------- | ------------------------- | ------------------------ |
+| char        | %c                        | %c                       |
+| int         | %d                        | %d                       |
+| float       | %f                        | %f                       |
+| double      | %f                        | %lf                      |
+| long int    | %ld                       | %ld                      |
+| long double | %Lf                       | %Lf                      |
+
 */
 
 /*
