@@ -483,7 +483,82 @@ int main()
     printf("The factorial of %d is %d\n", num, factorial(num));
     return 0;
 }
+// ________________________________________________
+// | Unit    | Conversion   |
+// | ------- | ------------ |
+// | 1 km    | 0.621 miles  |
+// | 1 mile  | 1.609 km     |
+// | 1 inch  | 2.54 cm      |
+// | 1 foot  | 12 inches    |
+// | 1 pound | 0.453 kg     |
+// | 1 kg    | 2.204 pounds |
 
+// #include <stdio.h>
+
+// float kiometer(float km){
+// if (km==0)
+// {
+//     return 0;
+// }else{
+//     return 0.6231*km;
+// }
+
+// }
+// int main()
+// {
+//     float val;
+//     printf("Enter the value");
+//     scanf("%f",&val);
+//     printf("%.2f km = %.3f miles\n", val, kiometer(val));
+
+//     return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     int marks[4];
+//     for (int i = 0; i < 4; i++)
+//     {
+//         printf("Enter the value of %d element of the array\n",i);
+//         scanf("%d",&marks[i]);
+//     }
+
+//     marks[0]=34;
+//     printf("marks of student 4 is %d\n ",marks[0]);
+//     marks[0]=90;
+//     printf("marks of student 4 is %d\n ",marks[0]);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int marks[5] = {45, 234, 23, 5,90};
+
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("The value of %d element of the array is %d\n", i, marks[i]);
+//     }
+
+//     return 0;
+// }
+#include <stdio.h>
+int main()
+{
+    int marks[2][5] = {
+        {405, 24, 2, 4, 0},
+        {45, 234, 23, 5, 90}};
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 5; j++)
+        {
+            printf("The value of marks[%d][%d] is %d\n", i, j, marks[i][j]);
+        } 
+    }
+    return 0;
+} 
 
 
 
