@@ -559,7 +559,72 @@ int main()
     }
     return 0;
 } 
+// ######################################################
+#include <stdio.h>
+int main()
+{
+    char input;
+    float value, result;
+    float kmsToMils = 0.621371;
+    float inchesToFoot = 0.0833333;
+    float cmsToInches = 0.393701;
+    float poundTokgs = 0.453592;
+    float inchesToMeters = 0.0254;
 
+    while (1)
+          {
+        printf("\nEnter the input character (q to quit)\n");
+        printf("1. km to miles\n");
+        printf("2. inches to foot\n");
+        printf("3. cms to inches\n");
+        printf("4. pound to kgs\n");
+        printf("5. inches to meters\n");
+
+        scanf(" %c", &input);
+
+        if (input == 'q')
+        {
+            break;
+        }
+
+        printf("Enter the value you want to convert: ");
+        scanf("%f", &value);
+
+        switch (input)
+        {
+        case '1':
+            result = value * kmsToMils;
+            printf("%.2f km = %.3f miles\n", value, result);
+            break;
+
+        case '2':
+            result = value * inchesToFoot;
+            printf("%.2f inches = %.3f foot\n", value, result);
+            break;
+
+        case '3':
+            result = value * cmsToInches;
+            printf("%.2f cms = %.2f inches\n", value, result);
+            break;
+
+        case '4':
+            result = value * poundTokgs;
+            printf("%.2f pounds = %.2f kgs\n", value, result);
+            break;
+
+        case '5':
+            result = value * inchesToMeters;
+            printf("%.2f inches = %.2f meters\n", value, result);
+            break;
+
+        default:
+            printf("Invalid input!\n");
+        }
+    }
+
+    return 0;
+}
+// ###############################
 
 
 
