@@ -720,10 +720,10 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //     return 0;
 // }
 
-// _________  actual and formal parameters 
+// _________  actual and formal parameters
 /*
 1) when a function is called ,the values (expressions) that are passed in the call are called the arguments or  actual parameters
-formal parameters are local variables which are assigned values from the arguments when the function is called. 
+formal parameters are local variables which are assigned values from the arguments when the function is called.
 */
 // call by reference
 // #include <stdio.h>
@@ -771,3 +771,76 @@ formal parameters are local variables which are assigned values from the argumen
 
 //     return 0;
 // }
+// ###### function reference and value  #######
+
+// #include <stdio.h>
+// int func1(int array[])
+// {
+
+//     for (int i = 0; i < 3; i++)
+//     {
+//         printf("The value at %d is %d\n", i, array[i]);
+//     }
+//     array[0] = 129087; // Very important point that if you change any value here,it gets reflected in main()
+
+// return 0;
+// }
+// void func2(int* ptr){
+//     for (int i = 0; i < 3; i++)
+//     {
+//         printf("The value at %d is %d\n",i,*(ptr+i));
+//     }
+
+// }
+// int main()
+// {
+//     int arr[] = {23, 45, 56};
+//     printf("The value at index 0 is %d\n", arr[0]);
+//     func1(arr);
+//     func2(arr);
+//     printf("The value at index 0 is %d\n", arr[0]);
+//     return 0;
+// }
+
+// #############  Strings in c     ############
+/*
+1) string is not a data type in c lang
+2) we have char ,int ,float and other data types but no 'string' data type in C
+3) srtring is not a supported data type in C but it is a very useful concept used to model real world entities like name, city etc.
+we express strings using an array of charachters terminated by a null character ('\0').The null character itself indicates that the string has been end here. e.g char name={'s','h','a','m','\0'};OR char name={"sham"}; automatic detected by compilar
+
+
+*/
+// problem
+// #include <stdio.h>
+// int main()
+// {
+// char str[5];
+// str="hellow";
+// printf("%s",str)
+//     return 0;
+// }
+
+#include <stdio.h>
+
+void printStr(char str[])
+{
+    int i = 0; // initialize i
+
+    while (str[i] != '\0')
+    {
+        printf("%c", str[i]);
+        i++;
+    }
+}
+
+int main()
+{
+    // char str[] = {'h','a','r','r','y','\0'};
+    // char str[] = "Harry";
+    char str[34];
+    gets(str);
+    printf("using:- %s",str);
+    // printStr("using %s",str);
+    return 0;
+}
