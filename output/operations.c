@@ -254,7 +254,6 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //         index +=1;
 //     printf("%d => %d\n",index-1,index);
 //     }
-    
 
 //     return 0;
 // }
@@ -267,7 +266,7 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 // // char a = "A";        // wrong
 // // char name[] = "A";   // correct
 
-//     char count[] = "Happysingh"; 
+//     char count[] = "Happysingh";
 //     int val;
 
 //      printf("Enter the value:\n");
@@ -311,7 +310,7 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //     goto end;
 // }
 // {
-   
+
 // }
 
 //         }
@@ -354,7 +353,7 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //     return 0;
 // }
 // #### types of functions #####
-//1)---- libary functions ----  functions included in c headers files e.g printf("the is a value")
+// 1)---- libary functions ----  functions included in c headers files e.g printf("the is a value")
 // In C language, header files contain the declaration of library functions.
 // When you use any built-in function like printf() or scanf(), you must include its header file at the top of the program.
 
@@ -374,7 +373,6 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 
 //------ include <stdio.h> ------
 // 2)user defined functions:- functions created by c programmer to reduce complexity of a porgram
-
 
 // e.gs of functions
 // #include <stdio.h>
@@ -408,7 +406,7 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //     {
 //      printf("%c %d",'*',i);
 //     }
-    
+
 //     printf("%c",'*');
 // }
 
@@ -417,8 +415,7 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //     printf("Enter a number");
 //     scanf("%d",&i);
 //     return i;
-// } 
-
+// }
 
 // int main()
 // {
@@ -431,35 +428,346 @@ printf("tab character \t\t my backslash \a %f",PI); window sound
 //    printf("the number enter %d",c);
 //     printstar(3);
 
-    
 //     return 0;
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-void table(int num)
-{
-    for (int i = 1; i <= 10; i++)
-    {
-        printf("%d x %d = %d\n", num, i, num * i);
-    }
-}
+// void table(int num)
+// {
+//     for (int i = 1; i <= 10; i++)
+//     {
+//         printf("%d x %d = %d\n", num, i, num * i);
+//     }
+// }
 
-int main()
-{
-    int num;
+// int main()
+// {
+//     int num;
 
-    printf("Enter the number you want multiplication table of:\n");
-    scanf("%d", &num);
+//     printf("Enter the number you want multiplication table of:\n");
+//     scanf("%d", &num);
 
-    printf("Multiplication table of %d is as follows:\n", num);
+//     printf("Multiplication table of %d is as follows:\n", num);
 
-    table(num);   // function call
+//     table(num);   // function call
 
-    return 0;
-}
+//     return 0;
+// }
+// n! factorial
+// #include <stdio.h>
 
+// Function to calculate factorial using recursion
+// int factorial(int number)
+// {
+//     if (number == 0 || number == 1)
+//     {
+//         return 1;
+//     }
+//     else
+//     {
+//         return number * factorial(number - 1);
+//     }
+// }
 
+// int main()
+// {
+//     int num;
+//     printf("Enter the number you want the factorial of: ");
+//     scanf("%d", &num);
+//     printf("The factorial of %d is %d\n", num, factorial(num));
+//     return 0;
+// }
+// #include <stdio.h>
 
+// int factorial(int operations_number)
+// {
 
+//     {
+//         if (operations_number == 0 || operations_number == 1)
+//         {
+//             return 1;
+//         }
+//         else
+//         {
+//             return operations_number * factorial(operations_number - 1);
+//         }
+//     }
+// }
+// int main()
+// {
+//     int num;
+//     printf("Enter the input here and get value ");
+//     scanf("%d",&num);
+//      printf("The factorial of %d is=> %d\n", num, factorial(num));
+//         return 0;
+// }
+// ________________________________________________
+// | Unit    | Conversion   |
+// | ------- | ------------ |
+// | 1 km    | 0.621 miles  |
+// | 1 mile  | 1.609 km     |
+// | 1 inch  | 2.54 cm      |
+// | 1 foot  | 12 inches    |
+// | 1 pound | 0.453 kg     |
+// | 1 kg    | 2.204 pounds |
 
+// #include <stdio.h>
+
+// float kiometer(float km){
+// if (km==0)
+// {
+//     return 0;
+// }else{
+//     return 0.6231*km;
+// }
+
+// }
+// int main()
+// {
+//     float val;
+//     printf("Enter the value");
+//     scanf("%f",&val);
+//     printf("%.2f km = %.3f miles\n", val, kiometer(val));
+
+//     return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     int marks[4];
+//     for (int i = 0; i < 4; i++)
+//     {
+//         printf("Enter the value of %d element of the array\n",i);
+//         scanf("%d",&marks[i]);
+//     }
+
+//     marks[0]=34;
+//     printf("marks of student 4 is %d\n ",marks[0]);
+//     marks[0]=90;
+//     printf("marks of student 4 is %d\n ",marks[0]);
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int main()
+// {
+//     int marks[5] = {45, 234, 23, 5,90};
+
+//     for (int i = 0; i < 5; i++)
+//     {
+//         printf("The value of %d element of the array is %d\n", i, marks[i]);
+//     }
+
+//     return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     int marks[2][5] = {
+//         {405, 24, 2, 4, 0},
+//         {45, 234, 23, 5, 90}};
+
+//     for (int i = 0; i < 2; i++)
+//     {
+//         for (int j = 0; j < 5; j++)
+//         {
+//             printf("The value of marks[%d][%d] is %d\n", i, j, marks[i][j]);
+//         }
+//     }
+//     return 0;
+// }
+// ########
+// #include <stdio.h>
+// int main()
+// {
+//     char input;
+//     float value, result;
+//     float kmsToMils = 0.621371;
+//     float inchesToFoot = 0.0833333;
+//     float cmsToInches = 0.393701;
+//     float poundTokgs = 0.453592;
+//     float inchesToMeters = 0.0254;
+
+//     while (1)
+//           {
+//         printf("\nEnter the input character (q to quit)\n");
+//         printf("1. km to miles\n");
+//         printf("2. inches to foot\n");
+//         printf("3. cms to inches\n");
+//         printf("4. pound to kgs\n");
+//         printf("5. inches to meters\n");
+
+//         scanf(" %c", &input);
+
+//         if (input == 'q')
+//         {
+//             break;
+//         }
+
+//         printf("Enter the value you want to convert: ");
+//         scanf("%f", &value);
+
+//         switch (input)
+//         {
+//         case '1':
+//             result = value * kmsToMils;
+//             printf("%.2f km = %.3f miles\n", value, result);
+//             break;
+
+//         case '2':
+//             result = value * inchesToFoot;
+//             printf("%.2f inches = %.3f foot\n", value, result);
+//             break;
+
+//         case '3':
+//             result = value * cmsToInches;
+//             printf("%.2f cms = %.2f inches\n", value, result);
+//             break;
+
+//         case '4':
+//             result = value * poundTokgs;
+//             printf("%.2f pounds = %.2f kgs\n", value, result);
+//             break;
+
+//         case '5':
+//             result = value * inchesToMeters;
+//             printf("%.2f inches = %.2f meters\n", value, result);
+//             break;
+
+//         default:
+//             printf("Invalid input!\n");
+//         }
+//     }
+
+//     return 0;
+// }
+
+// ###### pointer #####
+
+// Dynamic memory allocation
+// Arrays,functions and sturctures
+// Return multiple values from a function
+// pointer reduces the code and improves the performance
+// #include <stdio.h>
+// int main()
+// {
+//     int a=34;
+//     int*ptra=&a;
+// printf("%d\n",*ptra); * print value and ptra print address
+// arr[i]==*(arr+i) both are same
+//     printf("%d",*ptra+2);
+//     return 0;
+// }
+// #include <stdio.h>
+// int main()
+// {
+//     int arr[]={10,20,30,40,50,60};
+//     printf("value at position 3 of the array is %d\n",arr[3]);
+//     printf("The address of first element of the array is %d\n",&arr[0]);
+//     printf("The address of second element of the array is %d\n",&arr[1]);
+//     printf("The address of second element of the array is %d\n",arr+1);
+
+//     //
+//     printf("The value at address of first element of the array is %d\n",arr[0]);
+//     printf("The value at address of first element of the array is %d\n",*(&arr[0]));
+//     printf("The value at address of second element of the array is %d\n",*(arr));
+//     printf("The value at address of second element of the array is %d\n",arr[1]);
+//     printf("The value at address of second element of the array is %d\n",*(arr+1));
+
+//     return 0;
+// }
+
+// #include <stdio.h>
+
+// int fib_iterative(int n)
+// {
+//     int a = 0, b = 1, c;
+
+//     if (n == 0)
+//         return 0;
+
+//     for (int i = 2; i <= n; i++)
+//     {
+//         c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return b;
+// }
+
+// int fib_recursive(int n)
+// {
+//     if (n == 0)
+//         return 0;
+//     else if (n == 1)
+//         return 1;
+//     else
+//         return fib_recursive(n - 1) + fib_recursive(n - 2);
+// }
+
+// int main()
+// {
+//     int number;
+
+//     printf("Enter a number to find fibonacci number\n");
+//     scanf("%d", &number);
+
+//     printf("The fibonacci number at %d using iterative is %d\n", number, fib_iterative(number));
+//     printf("The fibonacci number at %d using recursive is %d\n", number, fib_recursive(number));
+
+//     return 0;
+// }
+
+// _________  actual and formal parameters 
+/*
+1) when a function is called ,the values (expressions) that are passed in the call are called the arguments or  actual parameters
+formal parameters are local variables which are assigned values from the arguments when the function is called. 
+*/
+// call by reference
+// #include <stdio.h>
+// void add(int *a, int *b)
+// {
+//     *a = 90;
+//     *b = 80;
+
+//     printf("Sum = %d\n", (*a + *b));
+// }
+
+// int main()
+// {
+//     int x = 10;
+//     int y = 2;
+
+//     add(&x, &y);
+
+//     printf("New value of x = %d\n", x);
+//     printf("New value of y = %d\n", y);
+
+//     return 0;
+// }
+
+// call by value
+// #include <stdio.h>
+
+// void add(int a, int b)
+// {
+//     a = 90;
+//     b = 80;
+
+//     printf("Sum = %d\n", a + b);
+// }
+
+// int main()
+// {
+//     int x = 10;
+//     int y = 2;
+
+//     add(x, y);
+
+//     printf("Value of x = %d\n", x);
+//     printf("Value of y = %d\n", y);
+
+//     return 0;
+// }
