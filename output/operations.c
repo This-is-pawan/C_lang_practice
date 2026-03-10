@@ -836,8 +836,8 @@ we express strings using an array of charachters terminated by a null character 
 
 // int main()
 // {
-    // char str[] = {'h','a','r','r','y','\0'};
-    // char str[] = "Harry";
+// char str[] = {'h','a','r','r','y','\0'};
+// char str[] = "Harry";
 //     char str[34];
 //     gets(str);
 //     printf("using:- %s",str);
@@ -847,9 +847,9 @@ we express strings using an array of charachters terminated by a null character 
 // ___________ string functions in c (#include<string.h>) ___________
 // C libaray:<string.h> multiple libaray in c
 // strcat()This function is used to concatenate or combine two given strings.
-// strien() This function is used to show length of a string 
+// strien() This function is used to show length of a string
 // strrev() This function is used to show reverse of string
-// strcpy() This functions is used to copy one string into another 
+// strcpy() This functions is used to copy one string into another
 // strcmp() This function is used to compare two given strings.
 
 // #include <stdio.h>
@@ -867,9 +867,6 @@ we express strings using an array of charachters terminated by a null character 
 //     puts(strrev(s1));
 //  strcpy(s3,strcat(s1,s2));
 //  puts(s3);
-
-
-
 
 //     return 0;
 // }
@@ -992,7 +989,7 @@ infomation store
 //     printf("%s got %d marks\n", shubham.name, shubham.marks);
 
 //     return 0;
-// } 
+// }
 // ################### type def ###################
 // #include <stdio.h>
 
@@ -1013,7 +1010,8 @@ infomation store
 #include <stdio.h>
 
 // typedef structure
-typedef struct Student {
+typedef struct Student
+{
     int id;
     int marks;
     char fav_char;
@@ -1025,18 +1023,25 @@ typedef int integer;
 
 int main()
 {
+    // int *a,b;
+    typedef int *intPointer;
+    intPointer a, b;
+    int c = 89;
+    a = &c;
+    // b=c;
+    b = &c;
     // using alias name
-    std s1, s2;
+    // std s1, s2;
 
-    s1.id = 34;
-    s2.id = 89;
+    // s1.id = 34;
+    // s2.id = 89;
 
-    ul l1, l2, l3;
-    integer a = 4;
+    // ul l1, l2, l3;
+    // integer a = 4;
 
-    printf("value of a is %d\n", a);
-    printf("s1 id = %d\n", s1.id);
-    printf("s2 id = %d\n", s2.id);
+    // printf("value of a is %d\n", a);
+    // printf("s1 id = %d\n", s1.id);
+    // printf("s2 id = %d\n", s2.id);
 
     return 0;
 }
