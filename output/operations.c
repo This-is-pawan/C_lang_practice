@@ -1007,41 +1007,118 @@ infomation store
 
 //     return 0;
 // }
-#include <stdio.h>
+// #include <stdio.h>
 
 // typedef structure
-typedef struct Student
-{
-    int id;
-    int marks;
-    char fav_char;
-    char name[34];
-} std;
+// typedef struct Student
+// {
+//     int id;
+//     int marks;
+//     char fav_char;
+//     char name[34];
+// } std;
 
-typedef unsigned long ul;
-typedef int integer;
+// typedef unsigned long ul;
+// typedef int integer;
 
-int main()
-{
-    // int *a,b;
-    typedef int *intPointer;
-    intPointer a, b;
-    int c = 89;
-    a = &c;
-    // b=c;
-    b = &c;
-    // using alias name
-    // std s1, s2;
+// int main()
+// {
+// int *a,b;
+// typedef int *intPointer;
+// intPointer a, b;
+// int c = 89;
+// a = &c;
+// // b=c;
+// b = &c;
+// using alias name
+// std s1, s2;
 
-    // s1.id = 34;
-    // s2.id = 89;
+// s1.id = 34;
+// s2.id = 89;
 
-    // ul l1, l2, l3;
-    // integer a = 4;
+// ul l1, l2, l3;
+// integer a = 4;
 
-    // printf("value of a is %d\n", a);
-    // printf("s1 id = %d\n", s1.id);
-    // printf("s2 id = %d\n", s2.id);
+// printf("value of a is %d\n", a);
+// printf("s1 id = %d\n", s1.id);
+// printf("s2 id = %d\n", s2.id);
 
-    return 0;
-}
+//     return 0;
+// }
+// ####### UNION in c###########
+/*
+1)union is a user defined data type (very similar to structures)
+2) the difference b/w structures and unions lies in the fact that in structure ,each member has its own storage location,whereas members of a union uses a single shared memory location.
+3) This single shared memory location is equal to the size of its largest data member.
+_____ declaring and accessing union members  ____
+1)like structure ,we access any member by using the member access operator(.) in unions.
+2) we use keyword unit to define a union.
+3) syntax is very similar to that of structure.
+
+ */
+// #include <stdio.h>
+
+// union test{
+//     int a;
+//     float b;
+//     char c;
+// };
+
+// int main()
+// {
+//     union test un;
+
+//     un.a = 5;
+//     printf("a = %d\n", un.a);
+
+//     un.b = 9.1;
+//     printf("b = %.2f\n", un.b);
+
+//     return 0;
+// }
+// ###### parser (html) #######
+
+// #include <stdio.h>
+// void parser(char str[])
+// {
+//     int i = 0;
+//     int insideTag = 0;
+//     while (str[i] != '\0')
+//     {
+//         if (str[i] == '<')
+//         {
+//             insideTag = 1;   // start ignoring
+//         }
+//         else if (str[i] == '>')
+//         {
+//             insideTag = 0;   // stop ignoring
+//         }
+//         else if (insideTag == 0)
+//         {
+//             printf("%c", str[i]);  // print only text
+//         }
+
+//         i++;
+//     }
+// }
+
+// int main()
+// {
+//     char string[] = "<h1>this is a heading</h1>";
+
+//     parser(string);
+
+//     return 0;
+// }
+
+//_______ variables local & global scope  (formal arguments inside the function parameter)______
+// 1)scope is a region of the program where a defined variable can exist and beyond which it cannot be accessed.
+// 2)variable which are accessed inside a function or a block are called local variables.
+// 3)they can only be accessed by the function they are declared in!
+// 4) they are inaccessible to the functions outside the function they are declared in!
+// ##### static variable
+// 1)static variable are variable which have a property of preserving their values even when they go out of scope.
+// 2)They preserve their value from the previous scope and are not initialized again.
+// 3) static variable remains in memory throughtout the span of the program.
+// 4) static variable are initialized to 0 if not initialized explicitly.
+// 5) in C,static variable can only be intialized using constant literals.
