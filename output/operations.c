@@ -821,26 +821,175 @@ we express strings using an array of charachters terminated by a null character 
 //     return 0;
 // }
 
+// #include <stdio.h>
+
+// void printStr(char str[])
+// {
+//     int i = 0; // initialize i
+
+//     while (str[i] != '\0')
+//     {
+//         printf("%c", str[i]);
+//         i++;
+//     }
+// }
+
+// int main()
+// {
+    // char str[] = {'h','a','r','r','y','\0'};
+    // char str[] = "Harry";
+//     char str[34];
+//     gets(str);
+//     printf("using:- %s",str);
+//   /  // printStr("using %s",str);
+//     return 0;
+// }
+// ___________ string functions in c (#include<string.h>) ___________
+// C libaray:<string.h> multiple libaray in c
+// strcat()This function is used to concatenate or combine two given strings.
+// strien() This function is used to show length of a string 
+// strrev() This function is used to show reverse of string
+// strcpy() This functions is used to copy one string into another 
+// strcmp() This function is used to compare two given strings.
+
+// #include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+//     char s1[]="Happy";
+//     char s2[]="Harry";
+//     char s3[54];
+//     printf("The strcmp for s1,s2 returned %d",strcmp(s1,s2));
+
+//     printf("The length of s1 %d\n",strlen(s1));
+//     printf("The length of s2 %d\n",strlen(s2));
+//     printf("The reverse string s1 is:");
+//     puts(strrev(s1));
+//  strcpy(s3,strcat(s1,s2));
+//  puts(s3);
+
+
+
+
+//     return 0;
+// }
+// problem
+// #include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+//     int arr[]={1,2,3,4,5};
+// for (int i = 4; i >=0; i--)
+// {
+// printf("%d",arr[i]);
+// }
+
+//     return 0;
+// }
+// ##########   structure in c    ###########
+/*
+(mean mutiple types of in one array ,object like js)
+infomation store
+1)structures are user defined data types in C.
+2)using structures allows us to combine data of different types together.
+3)it is used to create a complex data type which contains diverse infomation.
+4) they are very similar to arrays but structure can store data of any type, which is practically more usefull.
+
+*/
+// ##### declarating a structure
+/*
+1)array elements are accessed using the subscript variable.
+2)in a similar fashion,structure memebers are accessed using dot[.] operator.
+3)(.) is called as "structure member operator".
+
+4) To access the member of the structure ,we use this operator in between "structure name " & "member name"
+
+ */
+
+// #include <stdio.h>
+
+// struct Employee{
+//     int id;
+//     char name[53];
+//     float marks;
+// };
+
+// struct Employee e1,e2;   // global variables
+
+// int main()
+// {
+//     struct Employee e1;  // local variable
+//     e1.id = 12;
+//     e1.marks = 34.12;
+
+//     return 0;
+// }
+// #include <stdio.h>
+
+// struct Employee{
+//     int id;
+//     char name[53];
+//     float marks;
+// } e1, e2;
+
+// int main()
+// {
+//     return 0;
+// }
+// best practice
+// #include <stdio.h>
+
+// struct Employee{
+//     int id;
+//     char name[53];
+//     float marks;
+// };
+
+// int main()
+// {
+//     struct Employee e1;
+
+//     e1.id = 12;
+//     e1.marks = 34.12;
+
+//     return 0;
+// }
+// ###################
+
 #include <stdio.h>
+#include <string.h>
 
-void printStr(char str[])
+struct Student
 {
-    int i = 0; // initialize i
-
-    while (str[i] != '\0')
-    {
-        printf("%c", str[i]);
-        i++;
-    }
-}
+    int id;
+    int marks;
+    char fav_char;
+    char name[24];
+};
 
 int main()
 {
-    // char str[] = {'h','a','r','r','y','\0'};
-    // char str[] = "Harry";
-    char str[34];
-    gets(str);
-    printf("using:- %s",str);
-    // printStr("using %s",str);
+    struct Student harry, ravi, shubham;
+
+    harry.id = 1;
+    ravi.id = 2;
+    shubham.id = 3;
+
+    harry.marks = 406;
+    ravi.marks = 246;
+    shubham.marks = 736;
+
+    harry.fav_char = 'p';
+    ravi.fav_char = 'p';
+    shubham.fav_char = 'p';
+
+    strcpy(harry.name, "Harry");
+    strcpy(ravi.name, "Ravi");
+    strcpy(shubham.name, "Shubham");
+
+    printf("%s got %d marks\n", harry.name, harry.marks);
+    printf("%s got %d marks\n", ravi.name, ravi.marks);
+    printf("%s got %d marks\n", shubham.name, shubham.marks);
+
     return 0;
 }
