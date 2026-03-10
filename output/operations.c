@@ -1146,3 +1146,63 @@ _____ declaring and accessing union members  ____
 
 //     return 0;
 // }
+//  _______solve problem _____
+// you manage a travel agency and you want n drivers to input their following details:
+// 1) Name
+// 2) Driving License No
+// 3) Route
+// 4) Kms
+// your programe  should be able to taken n as inut and your drivers will start inputting theirs details one by one. 
+// user structure
+
+#include <stdio.h>
+
+struct Driver
+{
+    char name[50];
+    char licenseNo[30];
+    char route[50];
+    int kms;
+};
+
+int main()
+{
+    int n;
+
+    printf("Enter number of drivers: ");
+    scanf("%d", &n);
+
+    struct Driver d[n];   // array of structures
+
+    // Input details
+    for(int i = 0; i < n; i++)
+    {
+        printf("\nEnter details of Driver %d\n", i+1);
+
+        printf("Name: ");
+        scanf("%s", d[i].name);
+
+        printf("License No: ");
+        scanf("%s", d[i].licenseNo);
+
+        printf("Route: ");
+        scanf("%s", d[i].route);
+
+        printf("Kms Driven: ");
+        scanf("%d", &d[i].kms);
+    }
+
+    // Display details
+    printf("\n----- Driver Details -----\n");
+
+    for(int i = 0; i < n; i++)
+    {
+        printf("\nDriver %d Details:\n", i+1);
+        printf("Name: %s\n", d[i].name);
+        printf("License No: %s\n", d[i].licenseNo);
+        printf("Route: %s\n", d[i].route);
+        printf("Kms Driven: %d\n", d[i].kms);
+    }
+
+    return 0;
+}
