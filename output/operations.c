@@ -1122,3 +1122,23 @@ _____ declaring and accessing union members  ____
 // 3) static variable remains in memory throughtout the span of the program.
 // 4) static variable are initialized to 0 if not initialized explicitly.
 // 5) in C,static variable can only be intialized using constant literals.
+#include <stdio.h>
+
+int func1(int b){
+    printf("The address of b inside func1 is %p\n", &b);
+    return b * 10;
+}
+
+int main()
+{ 
+    int b = 34;
+
+    printf("The address of b inside main is %p\n", &b);   // fixed
+    int val = func1(b);
+
+    // int *ptr = &val;
+
+    printf("The value of func1 is %d\n", val);
+
+    return 0;
+}
