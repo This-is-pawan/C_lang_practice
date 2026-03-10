@@ -956,40 +956,87 @@ infomation store
 // }
 // ###################
 
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-struct Student
-{
+// struct Student
+// {
+//     int id;
+//     int marks;
+//     char fav_char;
+//     char name[];
+// };
+
+// int main()
+// {
+//     struct Student harry, ravi, shubham;
+
+//     harry.id = 1;
+//     ravi.id = 2;
+//     shubham.id = 3;
+
+//     harry.marks = 406;
+//     ravi.marks = 246;
+//     shubham.marks = 736;
+
+//     harry.fav_char = 'p';
+//     ravi.fav_char = 'p';
+//     shubham.fav_char = 'p';
+
+//     strcpy(harry.name, "Harry");
+//     strcpy(ravi.name, "Ravi");
+//     strcpy(shubham.name, "Shubham");
+
+//     printf("%s got %d marks\n", harry.name, harry.marks);
+//     printf("%s got %d marks\n", ravi.name, ravi.marks);
+//     printf("%s got %d marks\n", shubham.name, shubham.marks);
+
+//     return 0;
+// } 
+// ################### type def ###################
+// #include <stdio.h>
+
+// int main()
+// {
+//     // typedef <existing_type> <alias_name>;
+
+//     typedef unsigned long ul;
+//     typedef int integer;
+
+//     ul l1, l2, l3;
+//     integer a = 4;
+
+//     printf("value of a is %d", a);
+
+//     return 0;
+// }
+#include <stdio.h>
+
+// typedef structure
+typedef struct Student {
     int id;
     int marks;
     char fav_char;
-    char name[24];
-};
+    char name[34];
+} std;
+
+typedef unsigned long ul;
+typedef int integer;
 
 int main()
 {
-    struct Student harry, ravi, shubham;
+    // using alias name
+    std s1, s2;
 
-    harry.id = 1;
-    ravi.id = 2;
-    shubham.id = 3;
+    s1.id = 34;
+    s2.id = 89;
 
-    harry.marks = 406;
-    ravi.marks = 246;
-    shubham.marks = 736;
+    ul l1, l2, l3;
+    integer a = 4;
 
-    harry.fav_char = 'p';
-    ravi.fav_char = 'p';
-    shubham.fav_char = 'p';
-
-    strcpy(harry.name, "Harry");
-    strcpy(ravi.name, "Ravi");
-    strcpy(shubham.name, "Shubham");
-
-    printf("%s got %d marks\n", harry.name, harry.marks);
-    printf("%s got %d marks\n", ravi.name, ravi.marks);
-    printf("%s got %d marks\n", shubham.name, shubham.marks);
+    printf("value of a is %d\n", a);
+    printf("s1 id = %d\n", s1.id);
+    printf("s2 id = %d\n", s2.id);
 
     return 0;
 }
