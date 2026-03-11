@@ -1248,7 +1248,7 @@ _____ declaring and accessing union members  ____
 // A storage  calss define scope ,default initial value & lifetime of a variable.
 // in previous lectures,we saw that dynamic memory allocation is a way in which the size of a data structure can be changed during the runtime.
 // memory assigned to a program in a typical architectrue can be broken down into four segments:
-// 1) Code 
+// 1) Code
 // 2) Static/global variable
 // 3) Stack
 // 4) Heap
@@ -1276,20 +1276,23 @@ _____ declaring and accessing union members  ____
 // }
 // ##########  void ponter  ############
 // A void pointer is a pointer that has no data type associated with it.
-// A void pointer can be easily typecasted to any pointer type 
+// A void pointer can be easily typecasted to any pointer type
 // In  simple language it is a general purpose pointer variable.
 
+#include <stdio.h>
+#include <string.h>
 
- 
+int main()
+{
+    int a = 345;
+    float b = 5.4;
+    void *ptr;
 
+    ptr = &a;
+    printf("The value of a is %d\n", *((int *)ptr));
 
+    ptr = &b;
+    printf("The value of b is %f\n", *((float *)ptr));
 
-
-
-
-
-
-
-
-
-
+    return 0;
+}
