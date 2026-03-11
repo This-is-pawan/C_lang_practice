@@ -1129,20 +1129,20 @@ _____ declaring and accessing union members  ____
 //     static int myvar=0;// only allow the constant value not any function call etc.
 //     printf("The value of my var is %d\n",myvar);   // fixed semicolon
 //     myvar++;                                     // moved before return
-    // printf("line 1129 The address of b inside func1 is %p\n", &b);
+// printf("line 1129 The address of b inside func1 is %p\n", &b);
 //     return b + myvar;
 // }
 
 // int main()
 // {
 //     int b = 34;
-    // printf("line 1136 The address of b inside main is %p\n", &b); // fixed
+// printf("line 1136 The address of b inside main is %p\n", &b); // fixed
 //     int val = func1(b);
 //      val = func1(b);
 
-    // int *ptr = &val;
+// int *ptr = &val;
 
-    // printf("line 1141 The value of func1 is %d\n", val);
+// printf("line 1141 The value of func1 is %d\n", val);
 
 //     return 0;
 // }
@@ -1152,57 +1152,144 @@ _____ declaring and accessing union members  ____
 // 2) Driving License No
 // 3) Route
 // 4) Kms
-// your programe  should be able to taken n as inut and your drivers will start inputting theirs details one by one. 
+// your programe  should be able to taken n as inut and your drivers will start inputting theirs details one by one.
 // user structure
 
-#include <stdio.h>
+// #include <stdio.h>
 
-struct Driver
-{
-    char name[50];
-    char licenseNo[30];
-    char route[50];
-    int kms;
-};
+// struct Driver
+// {
+//     char name[50];
+//     char licenseNo[30];
+//     char route[50];
+//     int kms;
+// };
 
-int main()
-{
-    int n;
+// int main()
+// {
+//     int n;
 
-    printf("Enter number of drivers: ");
-    scanf("%d", &n);
+// printf("Enter number of drivers: ");
+// scanf("%d", &n);
 
-    struct Driver d[n];   // array of structures
+// struct Driver d[n];   // array of structures
 
-    // Input details
-    for(int i = 0; i < n; i++)
-    {
-        printf("\nEnter details of Driver %d\n", i+1);
+// // Input details
+// for(int i = 0; i < n; i++)
+// {
+//     printf("\nEnter details of Driver %d\n", i+1);
 
-        printf("Name: ");
-        scanf("%s", d[i].name);
+//     printf("Name: ");
+//     scanf("%s", d[i].name);
 
-        printf("License No: ");
-        scanf("%s", d[i].licenseNo);
+//     printf("License No: ");
+//     scanf("%s", d[i].licenseNo);
 
-        printf("Route: ");
-        scanf("%s", d[i].route);
+//     printf("Route: ");
+//     scanf("%s", d[i].route);
 
-        printf("Kms Driven: ");
-        scanf("%d", &d[i].kms);
-    }
+//         printf("Kms Driven: ");
+//         scanf("%d", &d[i].kms);
+//     }
 
-    // Display details
-    printf("\n----- Driver Details -----\n");
+//     // Display details
+//     printf("\n----- Driver Details -----\n");
 
-    for(int i = 0; i < n; i++)
-    {
-        printf("\nDriver %d Details:\n", i+1);
-        printf("Name: %s\n", d[i].name);
-        printf("License No: %s\n", d[i].licenseNo);
-        printf("Route: %s\n", d[i].route);
-        printf("Kms Driven: %d\n", d[i].kms);
-    }
+//     for(int i = 0; i < n; i++)
+//     {
+//         printf("\nDriver %d Details:\n", i+1);
+//         printf("Name: %s\n", d[i].name);
+//         printf("License No: %s\n", d[i].licenseNo);
+//         printf("Route: %s\n", d[i].route);
+//         printf("Kms Driven: %d\n", d[i].kms);
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
+// ############## Dynamic memory allocation ########
+// four function (malloc,calloc , realloc,free)
+// 1) malloc()stands for memory allocation
+// #)it reserves a block of memory with the given    amount of bytes.
+// #) the return value is a void pointer to the allocated space
+// #) therefore the void pointer needs to be casted to the approprate type as per the requirements
+// #) However,if the space is insufficient ,allocation of memory fails and it retruns a NULL pointer.
+// #) All the values at allocated memory are initialized to garbage values.
+// syntax:
+// ptr=(ptr-type*) malloc(size_in_bytes)
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+//     int *ptr;
+
+//     ptr = (int *)malloc(3 * sizeof(int));
+
+//     for (int i = 0; i < 3; i++)
+//     {
+//         printf("Enter the value no %d of this array:\n", i);
+//         scanf("%d", &ptr[i]);
+//     }
+
+//     // printing values
+//     for (int i = 0; i < 3; i++)
+//     {
+//         printf("Value at index %d is %d\n", i, ptr[i]);
+//     }
+
+//     free(ptr); // free allocated memory
+
+//     return 0;
+// }
+// other is pending
+// $$$$$$$$$$$ storage class in c $$$$$$$$$$$
+
+// A storage  calss define scope ,default initial value & lifetime of a variable.
+// in previous lectures,we saw that dynamic memory allocation is a way in which the size of a data structure can be changed during the runtime.
+// memory assigned to a program in a typical architectrue can be broken down into four segments:
+// 1) Code 
+// 2) Static/global variable
+// 3) Stack
+// 4) Heap
+// in C language  ,storage classes most oftenly used:
+// 1)Automatic variable
+// 2)External variable
+// 3) Static variable
+// 4) Register variable
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <time.h>
+
+// int generateRandomNumber(int n)
+// {
+//     return rand() % n;
+// }
+
+// int main()
+// {
+//     srand(time(NULL));  // seed only once
+
+//     printf("The random number between 0 to 4 is %d\n", generateRandomNumber(15));
+
+//     return 0;
+// }
+// ##########  void ponter  ############
+// A void pointer is a pointer that has no data type associated with it.
+// A void pointer can be easily typecasted to any pointer type 
+// In  simple language it is a general purpose pointer variable.
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
