@@ -1383,12 +1383,35 @@ the #
 
 */
 // ####### default macors   #####
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(){
+//     printf("File name is %s",__FILE__);
+//     printf("%n",__DATE__);
+//     printf("%d",__LINE__);
+//     printf("%d",__STDC__);
+//     return 0;
+// }
+// ############## why do we need a  file  #################
+// volatile(RAM) and non volatile memory(Hard Desk)
+// file system 
+
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    printf("File name is %s",__FILE__);
-    printf("%n",__DATE__);
-    printf("%d",__LINE__);
-    printf("%d",__STDC__);
+  FILE *ptr =null;
+  char string[64]="This content was produced by tutorial164.c" ;
+// *********** reading a file********
+ ptr=fopen("myfile.txt");
+ fscanf(ptr,"%s",string);
+ printf("The content of this file has %s\n",string);
+//  ******* writing  a file  *****
+ptr =fopen("myfile.txt","w");
+fprintf(ptr,"%s",string);
+
     return 0;
 }
+
+
+
+
