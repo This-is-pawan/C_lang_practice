@@ -1279,20 +1279,116 @@ _____ declaring and accessing union members  ____
 // A void pointer can be easily typecasted to any pointer type
 // In  simple language it is a general purpose pointer variable.
 
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     int a = 345;
+//     float b = 5.4;
+//     void *ptr;
+
+//     ptr = &a;
+//     printf("The value of a is %d\n", *((int *)ptr));
+
+//     ptr = &b;
+//     printf("The value of b is %f\n", *((float *)ptr));
+
+//     return 0;
+// }
+// $$$$$$$$$$$$$  NULL pointer     $$$$$$$$$$$
+// NULL pointer is a pointer has a value reserved for indicating that the pointer or reference does not refer to a valid object.
+// a null pointer is guaranted to compare unequal to any pointer that pointer to a valid object.
+//
+// Dereferencing a null pointer is undefined behavior in C ,and a conforming implementations is allowed to assume that any pointer that is dereferenced is not null.
+//
+// #include <stdio.h>
+// #include <string.h>
+
+// int main()
+// {
+//     int* ptr=NULL;
+//    printf("the %d ",ptr);
+
+//     return 0;
+// }
+
+// ######## Dangling pointer  ########
+// A pointer to a freed memory location or the location whose content has been deleted is called a dangling pointer.
+// Dangling pointers arise during object destruction when an object that has an incoming reference is deleted or deallocated ,without modifying the value of the pointer, so that the pointer to the memory location of the deallocated meomory.
+//
+// //
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int* functionDangling() {
+//     int a, b;
+//     int *sum = (int*)malloc(sizeof(int));   // dynamic memory
+
+//     a = 34;
+//     b = 364;
+
+//     *sum = a + b;   // store value in allocated memory
+//     return sum;     // return pointer
+// }
+
+// int main()
+// {
+//     int *ptr = (int*) malloc(7 * sizeof(int));   // allocate memory for 7 integers
+
+//     ptr[0] = 34;
+//     ptr[1] = 36;
+//     ptr[2] = 64;
+//     ptr[3] = 5;
+
+//     printf("First value: %d\n", ptr[0]);
+
+//     free(ptr);   // free allocated memory
+//     ptr = NULL;  // avoid dangling pointer
+
+//     int *result = functionDangling();
+//     printf("Sum is %d\n", *result);
+//     free(result);
+
+//     return 0;
+// }
+// ######what is a wild pointer ?###########
+// 1)uninitialized pointers are Know a  wild pointers
+// 2)These pointers point to some arbitraray location in memory and may casue a program to crash or behave badly.
+// 3)Dereferencing  wild pointer can cause nasty bugs
+// it is suggested to always initialize unsaved pointers to NULL.
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main()
+// {
+//     int a=334;
+//     int *ptr;// This is a wild pointer
+//     *ptr-34; // This is a not a good thing to do
+//     printf("The value of a is %d\n",*ptr);
+//     return 0;
+// }
+// ______preprocessor in c_______
+//  quick recap
+// compiler conver textual form of a C program into an executalble.                               There are four phaseed for a C program to become an executable.
+// preprocessing (removal of comments,expansion of macros,expansion of include,expansion of files) compilation (assembly,level,instructions,are generated),assembly(.o,.exe,print are not concerted,ALI are concerted to machine code) linking (the function implementation)
+//  ---NOW PREPROCESSOR OF C ----
+/* 
+C preprocessor comes under action before the actual compilation process
+C preprocessor is not a part of the of the c compiler.
+it is a text substitution tool
+All preprocessor commands begin wih a hash symbol(#).#include <stdio.h> etc
+ preproocessor cmd e.g #define,#include etc
+The #include directive
+the #
+
+*/
+// ####### default macors   #####
 #include <stdio.h>
-#include <string.h>
-
-int main()
-{
-    int a = 345;
-    float b = 5.4;
-    void *ptr;
-
-    ptr = &a;
-    printf("The value of a is %d\n", *((int *)ptr));
-
-    ptr = &b;
-    printf("The value of b is %f\n", *((float *)ptr));
-
+#include <stdlib.h>
+int main(){
+    printf("File name is %s",__FILE__);
+    printf("%n",__DATE__);
+    printf("%d",__LINE__);
+    printf("%d",__STDC__);
     return 0;
 }
